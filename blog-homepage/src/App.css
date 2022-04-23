@@ -19,6 +19,20 @@ main {
   flex-direction: column;
 }
 
+main > section:nth-child(2) article {
+  flex-direction: column;
+}
+
+main > section:nth-child(2) .postImage {
+  height: 100px;
+  width: 100%;
+  border-radius: 0.15rem 0.15rem 0 0;
+}
+
+main > section:nth-child(2) article {
+  flex: 1 1 250px;
+}
+
 .container {
   display: flex;
   flex-direction: row;
