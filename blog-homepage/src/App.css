@@ -21,16 +21,15 @@ main {
 
 main > section:nth-child(2) article {
   flex-direction: column;
+  flex: 1 1 250px;
+  align-content: flex-end;
+  min-height: 250px;
 }
 
 main > section:nth-child(2) .postImage {
   height: 100px;
   width: 100%;
   border-radius: 0.15rem 0.15rem 0 0;
-}
-
-main > section:nth-child(2) article {
-  flex: 1 1 250px;
 }
 
 .container {
@@ -50,6 +49,8 @@ main > section:nth-child(2) article {
   flex-direction: column;
   justify-content: space-between;
   padding: 15px;
+  height: 100%;
+  width: 100%;
 }
 
 header {
@@ -73,13 +74,17 @@ header h2 {
   vertical-align: top;
 }
 
+h4 {
+  margin-bottom: 0.4rem;
+}
+
 article {
   display: flex;
   flex-direction: row;
   border: 1px solid #d3d3d3;
   border-radius: 0.2rem;
   margin: 0.7rem;
-  flex: 1 1 400px;
+  flex: 1 1 370px;
 }
 
 .byline {
