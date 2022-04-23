@@ -12,6 +12,7 @@ p {
 }
 
 main {
+  max-width: 1200px;
   padding: 40px;
   display: flex;
   justify-content: center;
@@ -69,11 +70,17 @@ article {
 
 .byline {
   display: flex;
-  align-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .byline img {
   width: 34px;
   border-radius: 17px;
   margin-right: 10px;
+}
+
+.bookmark {
+  display: flex;
+  align-content: flex-end;
 }
