@@ -1,3 +1,5 @@
+/* Global CSS settings */
+
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +13,9 @@ p {
   margin-bottom: 2px;
 }
 
-main {
+/* BEM named CSS settings */
+
+.app-container {
   max-width: 1200px;
   padding: 40px;
   display: flex;
@@ -19,31 +23,47 @@ main {
   flex-direction: column;
 }
 
-main > section:nth-child(2) article {
+.post {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #d3d3d3;
+  border-radius: 0.2rem;
+  margin: 0.7rem;
+  flex: 1 1 370px;
+}
+
+.post-missed {
   flex-direction: column;
   flex: 1 1 250px;
   align-content: flex-end;
   min-height: 250px;
 }
 
-main > section:nth-child(2) .postImage {
+.post__image {
+  object-fit: cover;
+  vertical-align: top;
+}
+
+.post-new__image {
+  height: 212px;
+  width: 165px;
+  border-radius: 0.15rem 0 0 0.15rem;
+}
+
+.post-missed__image {
   height: 100px;
   width: 100%;
   border-radius: 0.15rem 0.15rem 0 0;
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
-}
-
-.posts {
+.posts-list {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 2rem;
 }
 
-.postDetails {
+.post-new__details,
+.post-missed__details {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -53,38 +73,21 @@ main > section:nth-child(2) .postImage {
   width: 100%;
 }
 
-header {
+.header {
   margin: 0 0 1rem 0;
   padding: 0 0 1rem 0;
   -webkit-box-shadow: 0px 2px 0px 0px #d3d3d3;
   box-shadow: 0px 1px 0px 0px #dedede;
 }
 
-header h2 {
+.header__text {
   display: inline;
   padding-bottom: 1.04rem;
   border-bottom: 1px solid #aeaeae;
 }
 
-.postImage {
-  height: 212px;
-  width: 165px;
-  object-fit: cover;
-  border-radius: 0.15rem 0 0 0.15rem;
-  vertical-align: top;
-}
-
-h4 {
+.post-new__title {
   margin-bottom: 0.4rem;
-}
-
-article {
-  display: flex;
-  flex-direction: row;
-  border: 1px solid #d3d3d3;
-  border-radius: 0.2rem;
-  margin: 0.7rem;
-  flex: 1 1 370px;
 }
 
 .byline {
@@ -93,10 +96,13 @@ article {
   width: 100%;
 }
 
-.byline img {
-  width: 34px;
-  border-radius: 17px;
+.byline__image {
+  width: 40px;
+  border-radius: 20px;
   margin-right: 10px;
+  border: 1px solid;
+  border-color: #00b100 transparent #00b100 transparent;
+  padding: 4px;
 }
 
 .bookmark {

@@ -1,25 +1,43 @@
 import React from "react";
-import Image from "../Assets/Image";
-import PostTitle from "./PostTitle";
-import PostSummary from "./PostSummary";
-import PostByline from "./PostByline";
+import Bookmark from "../UI/Bookmark";
 
-const Post = (props) => {
+const dateHandler = (date) => {
+  const newDate = new Date(date);
+  return newDate.toDateString().slice(4, 11);
+};
+
+const Post = ({ type, id, data }) => {
+  const newDate = dateHandler(data.postedDate);
+
   return (
-    <article>
-      <Image class="postImage" src={props.data.image} alt={""} />
-      <section className="postDetails">
-        <div className="post">
-          <PostTitle content={props.data.title} />
-          <PostSummary content={props.data.description} />
+    <article className={`post post-${type}`}>
+      {/* Post details start */}
+      <img
+        className={`post__image post-${type}__image`}
+        src={data.image}
+        alt=""
+      />
+      <section className={`post-${type}__details`}>
+        <div>
+          <h4 className={`post-${type}__title`}>{data.title}</h4>
+          <p className={`post-${type}__description`}>{data.description}</p>
         </div>
+        {/* Post details end */}
+
+        {/* Post byline start */}
         <div className="byline">
-          <PostByline
-            image={props.data.author.image}
-            name={props.data.author.name}
-            postedDate={props.data.postedDate}
-            minutesToRead={props.data.minutesToRead}
-          />
+          <section className="byline">
+            <img className="byline__image" src={data.author.image} alt="" />
+            <section>
+              <p>{data.author.name}</p>
+              <p>
+                {newDate} - {data.minutesToRead} min to read
+              </p>
+            </section>
+          </section>
+          {/* Post byline end */}
+
+          <Bookmark />
         </div>
       </section>
     </article>

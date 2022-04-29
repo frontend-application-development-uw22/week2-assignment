@@ -1,5 +1,6 @@
 [
   {
+    "id": 0,
     "title": "The 7 Habits of Highly Creative People",
     "description": "\"What a good artist understands is that nothing comes from nowhere. Nothing is completely original.\"",
     "image": "https://cdn-images-1.medium.com/max/800/1*PIC-U670COEqmGwt4cvXAA.jpeg",
@@ -15,6 +16,7 @@
     "memberPreview": false
   },
   {
+    "id": 1,
     "title": "This Handy Chart Automatically Generates a Pitch for Your New Novel",
     "description": "Feeling stuck? We help you skip the writing and go straight to the press release",
     "image": "https://cdn-images-1.medium.com/max/800/1*KHs6OgOb7_aJhmQvOKj_dg.jpeg",
@@ -30,6 +32,7 @@
     "memberPreview": false
   },
   {
+    "id": 2,
     "title": "Do Something You Can't Win At",
     "description": "And make it something you love",
     "image": "https://cdn-images-1.medium.com/max/800/1*cioT9CBBV2s0svet9LqKZA.png",
@@ -45,6 +48,7 @@
     "memberPreview": false
   },
   {
+    "id": 3,
     "title": "Art as a Second Language",
     "description": "Drawing is a translation of all my voices and words — an attempt to draw nothing",
     "image": "https://cdn-images-1.medium.com/max/800/1*_NTwW2r8Konom4d5vIPkuw.png",

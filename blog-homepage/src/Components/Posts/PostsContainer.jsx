@@ -1,12 +1,15 @@
 import React from "react";
 import Post from "./Post";
+import classes from "./PostsContainer.module.css";
 
-const PostsContainer = (props) => {
+const PostsContainer = ({ type, data }) => {
   return (
-    <section class="posts">
-      {props.data.map((post) => {
-        return <Post key={post.id} data={post} />;
-      })}
+    <section className="posts-list">
+      {data.length ? (
+        data.map((post) => <Post type={type} key={post.id} data={post} />)
+      ) : (
+        <h2>No blog posts at this time</h2>
+      )}
     </section>
   );
 };
