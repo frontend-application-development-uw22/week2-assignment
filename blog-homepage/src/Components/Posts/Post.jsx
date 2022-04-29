@@ -1,5 +1,6 @@
 import React from "react";
 import Bookmark from "../UI/Bookmark";
+import PropTypes from "prop-types";
 
 const dateHandler = (date) => {
   const newDate = new Date(date);
@@ -42,6 +43,10 @@ const Post = ({ type, id, data }) => {
       </section>
     </article>
   );
+};
+
+Post.propTypes = {
+  type: PropTypes.string,
 };
 
 export default Post;

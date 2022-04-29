@@ -1,6 +1,6 @@
 import React from "react";
 import Post from "./Post";
-import classes from "./PostsContainer.module.css";
+import PropTypes, { string } from "prop-types";
 
 const PostsContainer = ({ type, data }) => {
   return (
@@ -12,6 +12,10 @@ const PostsContainer = ({ type, data }) => {
       )}
     </section>
   );
+};
+
+PostsContainer.propTypes = {
+  type: PropTypes.string,
 };
 
 export default PostsContainer;
