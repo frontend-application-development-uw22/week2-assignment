@@ -1,6 +1,6 @@
 import React from "react";
 import Post from "./Post";
-import PropTypes, { string } from "prop-types";
+import PropTypes from "prop-types";
 
 const PostsContainer = ({ type, data }) => {
   return (
@@ -15,7 +15,12 @@ const PostsContainer = ({ type, data }) => {
 };
 
 PostsContainer.propTypes = {
-  type: PropTypes.string,
+  type: PropTypes.string.isRequired,
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    })
+  ),
 };
 
 export default PostsContainer;

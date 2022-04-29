@@ -46,7 +46,17 @@ const Post = ({ type, id, data }) => {
 };
 
 Post.propTypes = {
-  type: PropTypes.string,
+  type: PropTypes.string.isRequired,
+  data: PropTypes.shape({
+    image: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    minutesToRead: PropTypes.number.isRequired,
+    author: PropTypes.shape({
+      image: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+    }),
+  }),
 };
 
 export default Post;
