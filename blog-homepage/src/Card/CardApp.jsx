@@ -5,7 +5,7 @@ import Articles from './Articles';
 import './Picture.css';
 import PropTypes from 'prop-types';
 
-function CardApp ({ srcUrl, title, description, authorImage, authorName, month, todayDate, minutesToRead, link, memberPreview, bookmarkBtn }) {
+function CardApp ({ srcUrl, title, description, authorImage, authorName, month, todayDate, minutesToRead, hasAudioAvailable }) {
   return (
       <div className = "container">
        <Section 
@@ -14,16 +14,15 @@ function CardApp ({ srcUrl, title, description, authorImage, authorName, month, 
        <Articles 
          title = { title } 
          description = { description } 
-         memberPreview = { memberPreview }
+         hasAudioAvailable = { hasAudioAvailable }
          />
        <AuthorDetails 
          authorImage = { authorImage } 
          authorName = { authorName }
          month = { month }
-         bookmarkBtn = { bookmarkBtn }
          todayDate = { todayDate }
          minutesToRead = { minutesToRead } 
-         link = { link }/>
+        />
       </div>
   );
 }
