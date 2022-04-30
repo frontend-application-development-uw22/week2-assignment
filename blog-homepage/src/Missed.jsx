@@ -1,9 +1,9 @@
-import React from 'react';
-import yourArticles from './your-articles.json';
+import React from "react";
+import missedArticles from './missed-articles.json'
 
-function ForYou() {
-  return(
-    yourArticles.forEach(article => {
+function Missed() {
+  return (
+    missedArticles.forEach(article => {
       <div>
         <div>{article.title}</div>
         <div>{article.description}</div>
@@ -17,4 +17,3 @@ function ForYou() {
     })
   )
 }
-export default ForYou;
