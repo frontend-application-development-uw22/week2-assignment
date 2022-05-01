@@ -11,16 +11,17 @@ const dateHandler = (date) => {
 
 const Post = ({ type, data }) => {
   const newDate = dateHandler(data.postedDate);
-  console.log(data.author.memberPreview);
 
   return (
     <article className={`post post-${type}`}>
       {/* Post details start */}
-      <img
-        className={`post__image post-${type}__image`}
-        src={data.image}
-        alt=""
-      />
+      <a href={data.link}>
+        <img
+          className={`post__image post-${type}__image`}
+          src={data.image}
+          alt=""
+        />
+      </a>
       <section className={`post-${type}__details`}>
         <div>
           {data.hasAudioAvailable && data.memberPreview ? (
