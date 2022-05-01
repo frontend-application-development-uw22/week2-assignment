@@ -97,9 +97,14 @@ p {
 }
 
 .byline__image {
-  width: 40px;
+  width: 34px;
   border-radius: 20px;
   margin-right: 10px;
+}
+
+.byline__image--member {
+  width: 44px;
+  border-radius: 22px;
   border: 1px solid;
   border-color: #00b100 transparent #00b100 transparent;
   padding: 4px;

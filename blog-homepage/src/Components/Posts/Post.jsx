@@ -7,7 +7,7 @@ const dateHandler = (date) => {
   return newDate.toDateString().slice(4, 11);
 };
 
-const Post = ({ type, id, data }) => {
+const Post = ({ type, data }) => {
   const newDate = dateHandler(data.postedDate);
 
   return (
@@ -28,7 +28,13 @@ const Post = ({ type, id, data }) => {
         {/* Post byline start */}
         <div className="byline">
           <section className="byline">
-            <img className="byline__image" src={data.author.image} alt="" />
+            <img
+              className={`byline__image ${
+                data.author.isMediumMember ? "byline__image--member" : ""
+              }`}
+              src={data.author.image}
+              alt=""
+            />
             <section>
               <p>{data.author.name}</p>
               <p>
