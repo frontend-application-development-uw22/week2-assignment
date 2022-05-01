@@ -6,10 +6,20 @@
   columns: 3;
 } */
 
+.crop {
+  width:fit-content;
+  height: auto;
+  background-position: center center;
+}
+
 .Title {
   font-weight:400;
   font-size:1.2em;
   color:black;
+}
+
+.Author-info {
+  justify-content:flex-end;
 }
 
 .Author-pic {
