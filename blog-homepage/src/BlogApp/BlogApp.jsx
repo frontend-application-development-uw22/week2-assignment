@@ -8,7 +8,9 @@ import YourBlog from './YourBlog';
 
 function BlogApp() {
     // const [{ title, description, image, link, authorName, authorImage, authorMedMem, postedDate, minutesToRead, hasAudioAvailable, memberPreview }] = yourArticles;
-
+// console.log(yourArticles);
+// console.log(missedArticles);
+// console.log(yourArticles[0].image)
     return (
         <div>
             <section className="your-blog">
