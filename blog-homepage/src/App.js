@@ -4,6 +4,8 @@ import Pictures from "./Pictures";
 
 import articles from './_data/your-articles.json'
 import missedArticles from './_data/missed-articles.json'
+import Articles from "./blogArticles/Articles";
+import MissedArticles from "./blogArticles/MissedArticles";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
       <hr />
 
       <ul>
+        {/*<Articles articles={Articles} />*/}
+
         {articles.map(function (item, idx) {
           const date = Date.parse(item.postedDate)
           const dateObject = new Date(date)
@@ -37,7 +41,25 @@ function App() {
           );
         })}
       </ul>
+      <h1>In Case You Missed It</h1>
+
+      <hr />
+
+      <MissedArticles missedArticles={missedArticles}/>
+
+
+
+      <ul>
+
+
+
+        {/*<MissedArticles missedArticles={missedArticles}/>*/}
+
+      </ul>
+
     </div>
+
+
   );
 }
 
