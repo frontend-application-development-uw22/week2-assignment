@@ -39,6 +39,25 @@ p {
   min-height: 250px;
 }
 
+.post-new__member-preview {
+  padding: 5px 0;
+}
+
+.post-new__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.post-new__member-preview--text {
+  display: none;
+}
+
+.post-missed__member-preview {
+  padding: 1px 0 8px 0;
+}
+
 .post__image {
   object-fit: cover;
   vertical-align: top;

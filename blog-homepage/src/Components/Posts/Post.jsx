@@ -1,6 +1,8 @@
 import React from "react";
 import Bookmark from "../UI/Bookmark";
 import PropTypes from "prop-types";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faVolumeHigh } from "@fortawesome/free-solid-svg-icons";
 
 const dateHandler = (date) => {
   const newDate = new Date(date);
@@ -9,6 +11,7 @@ const dateHandler = (date) => {
 
 const Post = ({ type, data }) => {
   const newDate = dateHandler(data.postedDate);
+  console.log(data.author.memberPreview);
 
   return (
     <article className={`post post-${type}`}>
@@ -20,6 +23,26 @@ const Post = ({ type, data }) => {
       />
       <section className={`post-${type}__details`}>
         <div>
+          {data.hasAudioAvailable && data.memberPreview ? (
+            <p className={`post-${type}__info`}>
+              <span className={`post-${type}__audio-available`}>
+                <FontAwesomeIcon icon={faVolumeHigh} /> Audio available
+              </span>
+              <span className={`post-${type}__member-preview`}>&#9733;</span>
+            </p>
+          ) : (
+            ""
+          )}
+          {!data.hasAudioAvailable && data.memberPreview ? (
+            <p className={`post-${type}__member-preview`}>
+              &#9733;
+              <span className={`post-${type}__member-preview--text`}>
+                &nbsp;Member preview
+              </span>
+            </p>
+          ) : (
+            ""
+          )}
           <h4 className={`post-${type}__title`}>{data.title}</h4>
           <p className={`post-${type}__description`}>{data.description}</p>
         </div>
