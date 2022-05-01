@@ -8,14 +8,14 @@ function MyArticles({articles}){
     <Item key={idx} item={item}/>)
 
   return(
-    <ul>
+    // <ul class="grid">
+    //   {items}
+    // </ul>
 
+    <div className="grid">
       {items}
-
-    </ul>
-
+    </div>
   )
-
 
 }
 

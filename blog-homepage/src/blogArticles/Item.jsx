@@ -6,22 +6,42 @@ function Item({item, idx}){
   const dateObject = new Date(date)
 
   return (
-    <li key={idx}>
+    <div key={idx}>
+      <img src={item.image} className="article-img"/>
       <span>
         <a href={item.link}>{item.title} </a>
-      </span>
-      <span>{item.author.name}</span>
-      <img src={item.image}/>
-      <p>{item.description}</p>
-      {/*<span>{item.title}</span>*/}
-      <span>{dateObject.toLocaleString('en-US', {
-        day: 'numeric',
-        month: 'long',
-      })}</span>
-      <span> · </span>
-      <span>{item.minutesToRead} Minute Read</span>
+        <p>{item.description}</p>
 
-    </li>
+        <div>
+
+          <img src={item.author.image} className="author-img"/>
+
+          <span>
+
+            <span className="author-name"> {item.author.name} </span>
+
+            <div>
+
+              <span>{dateObject.toLocaleString('en-US', {
+                            day: 'numeric',
+                            month: 'long',
+                          })}
+              </span>
+              <span> · </span>
+              <span>{item.minutesToRead} Minute Read</span>
+
+            </div>
+
+
+
+          </span>
+
+        </div>
+
+      </span>
+
+
+    </div>
 
     )
 

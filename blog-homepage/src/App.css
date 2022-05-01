@@ -36,3 +36,27 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+.author-name{
+  font-weight: bold;
+
+
+
+}
+
+.article-img{
+  width:240px;
+  height:240px;
+  object-fit:cover;
+  /*border-radius:50%;*/
+}
+
+
+.grid{
+  display: grid;
+  /*grid-template-columns: 200px 200px;*/
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+}
