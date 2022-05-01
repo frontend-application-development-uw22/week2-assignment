@@ -8,10 +8,10 @@ function ForYou() {
       <div key={article.id}>
         <p>{article.title}</p>
         <p>{article.description}</p>
-        <p>{article.image}</p>
+        <img src={article.image} />
         <p>{article.link}</p>
         <p>{article.author.name}</p>
-        {/* <img>{article.author.image}</img> */}
+        <img src={article.author.image} alt="Image of author"/>
         <p>{article.postedDate}</p>
         <p>{article.minutesToRead}-minute read</p>
       </div>))

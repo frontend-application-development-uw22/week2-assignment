@@ -3,18 +3,20 @@ import missedArticles from './missed-articles.json'
 
 function Missed() {
   return (
-    missedArticles.map(article => {
       <div>
-        <div>{article.title}</div>
-        <div>{article.description}</div>
-        <div>{article.image}</div>
-        <div>{article.link}</div>
-        <div>{article.author.name}</div>
-        <div>{article.author.image}</div>
-        <div>{article.postedDate}</div>
-        <div>{article.minutesToRead}</div>
-      </div>
-    })
+        {missedArticles.map((article) => (
+        <div key={article.id}>
+          <p>{article.title}</p>
+          <p>{article.description}</p>
+          <img src={article.image}/>
+          <p>{article.link}</p>
+          <p>{article.author.name}</p>
+          <img src={article.author.image} alt="Image of the author"/>
+          <p>{article.postedDate}</p>
+          <p>{article.minutesToRead}</p>
+        </div>))
+        }
+        </div>
   )
 }
 

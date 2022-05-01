@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "title": "What Would Happen If You Did These Things Every Day...",
         "description": "For thirty days...",
         "image": "https://cdn-images-1.medium.com/max/800/1*NosScbnZp8m_clHHaPQ3mg.jpeg",
@@ -15,6 +16,7 @@
         "memberPreview": false
     },
     {
+        "id": 2,
         "title": "10 Strategies for Creating Viral and Powerful Content",
         "description": "",
         "image": "https://cdn-images-1.medium.com/max/800/0*jxP3G649xndI9S_m.",
@@ -30,6 +32,7 @@
         "memberPreview": false
     },
     {
+        "id": 3,
         "title": "Useful Tools for Writers",
         "description": "Jumpstart your process.",
         "image": "https://cdn-images-1.medium.com/max/800/1*Msq_1dsr2maPq3ujjTVu3w.jpeg",
