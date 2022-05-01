@@ -42,7 +42,7 @@ Ensure that your UI meets the following criteria:
 * Code should render the following data for each article on the page:
     * "For you" section
     * "In case you missed it" section
-    * Articles. Each article should have:
+    * MyArticles. Each article should have:
         * Image
         * Title
         * Description
