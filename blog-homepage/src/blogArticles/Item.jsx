@@ -6,42 +6,84 @@ function Item({item, idx}){
   const dateObject = new Date(date)
 
   return (
-    <div key={idx}>
-      <img src={item.image} className="article-img"/>
-      <span>
-        <a href={item.link}>{item.title} </a>
-        <p>{item.description}</p>
 
-        <div>
+    <div key={idx} className="parent">
 
-          <img src={item.author.image} className="author-img"/>
+      <div className="child">
 
-          <span>
+        <img src={item.image} className="article-img"/>
 
-            <span className="author-name"> {item.author.name} </span>
 
-            <div>
+      </div>
 
-              <span>{dateObject.toLocaleString('en-US', {
-                            day: 'numeric',
-                            month: 'long',
-                          })}
-              </span>
-              <span> · </span>
-              <span>{item.minutesToRead} Minute Read</span>
+      <div className="child">
 
-            </div>
+        <div className="parent-two">
+
+          <div className="child-two">
+
+            <a href={item.link} className="link-style"><strong>{item.title} </strong></a>
+
+          </div>
 
 
 
-          </span>
+          <div className="child-two">
+
+            <p>{item.description}</p>
+
+          </div>
+
+
 
         </div>
 
-      </span>
+
+      </div>
+
+
+
 
 
     </div>
+
+
+    // <div key={idx}>
+    //   <img src={item.image} className="article-img"/>
+    //   <span>
+    //     <a href={item.link}>{item.title} </a>
+    //     <p>{item.description}</p>
+    //
+    //     <div>
+    //
+    //       <img src={item.author.image} className="author-img"/>
+    //
+    //       <span>
+    //
+    //         <span className="author-name"> {item.author.name} </span>
+    //
+    //         <div>
+    //
+    //           <span>{dateObject.toLocaleString('en-US', {
+    //                         day: 'numeric',
+    //                         month: 'long',
+    //                       })}
+    //           </span>
+    //           <span> · </span>
+    //           <span>{item.minutesToRead} Minute Read</span>
+    //
+    //         </div>
+    //
+    //
+    //
+    //       </span>
+    //
+    //     </div>
+    //
+    //   </span>
+    //
+    //
+    // </div>
 
     )
 
