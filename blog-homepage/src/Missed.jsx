@@ -3,7 +3,7 @@ import missedArticles from './missed-articles.json'
 
 function Missed() {
   return (
-    missedArticles.forEach(article => {
+    missedArticles.map(article => {
       <div>
         <div>{article.title}</div>
         <div>{article.description}</div>
@@ -17,3 +17,5 @@ function Missed() {
     })
   )
 }
+
+export default Missed;

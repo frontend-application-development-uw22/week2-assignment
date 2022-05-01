@@ -3,18 +3,20 @@ import yourArticles from './your-articles.json';
 
 function ForYou() {
   return(
-    yourArticles.forEach(article => {
-      <div>
-        <div>{article.title}</div>
-        <div>{article.description}</div>
-        <div>{article.image}</div>
-        <div>{article.link}</div>
-        <div>{article.author.name}</div>
-        <div>{article.author.image}</div>
-        <div>{article.postedDate}</div>
-        <div>{article.minutesToRead}</div>
-      </div>
-    })
+    <div>
+      {yourArticles.map((article) => (
+      <div key={article.id}>
+        <p>{article.title}</p>
+        <p>{article.description}</p>
+        <p>{article.image}</p>
+        <p>{article.link}</p>
+        <p>{article.author.name}</p>
+        {/* <img>{article.author.image}</img> */}
+        <p>{article.postedDate}</p>
+        <p>{article.minutesToRead}-minute read</p>
+      </div>))
+      }
+    </div>
   )
 }
 export default ForYou;

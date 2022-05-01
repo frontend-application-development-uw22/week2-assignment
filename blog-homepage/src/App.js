@@ -2,12 +2,13 @@
 // import missedArticles from './missed-articles.json';
 // import yourArticles from './your-articles.json';
 import ForYou from './ForYou';
+import Missed from './Missed';
 
 function App() {
   return (
     <div>
       <ForYou />
-      {/*   <Missed /> */}
+      <Missed />
     </div>
   )
 }
