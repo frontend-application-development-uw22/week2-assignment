@@ -1,6 +1,16 @@
 import React from 'react';
 import yourArticles from './your-articles.json';
 
+function getDate(id) {
+  yourArticles.forEach((article) => {
+    if (article.id === id) {
+      let dateObj = new Date(article.postedDate);
+      let dateMonth = dateObj.getMonth + 1;
+      let dateDay = dateObj.getDate;
+      console.log(`{${dateMonth} ${dateDay}}`);
+    }
+})}
+
 function ForYou() {
   return(
     <>
@@ -21,7 +31,7 @@ function ForYou() {
                     href={article.link}>{article.title}
                   </a>
                   <p className="card-text">{article.description}</p>
-                  <div className="card-footer row">
+                  <div className="row">
                     <div className="col-md-4 Author-info">
                       <img 
                       className="Author-pic img-fluid" 
@@ -30,15 +40,14 @@ function ForYou() {
                     </div>
                     <div className="col-md-8"> 
                       <small className="text-muted">
-                        <p >{article.author.name}</p>
-                        <p>{article.postedDate}</p>
-                        <p>{article.minutesToRead}-minute read</p>
+                        <p className="fw-bold">{article.author.name}</p>
+                        <p>{getDate(article.id)}</p>
+                        <p>{article.minutesToRead} min read</p>
                       </small>
                     </div>
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>

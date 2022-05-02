@@ -7,8 +7,8 @@ import Missed from './Missed';
 
 function App() {
   return (
-    <div>
-      <div className="mt-3 mb-3">
+    <div className="m-2">
+      <div className="mt-4 mb-3">
         <h4>For you</h4>
       </div>
       <hr></hr>
