@@ -1,5 +1,6 @@
 import React from "react";
 import missedArticles from './missed-articles.json'
+import moment from 'moment';
 
 function Missed() {
   return (
@@ -27,7 +28,7 @@ function Missed() {
               <div className="col-md-8"> 
                 <small className="text-muted">
                   <p >{article.author.name}</p>
-                  <p>{article.postedDate}</p>
+                  <p>{moment(article.postedDate).format("MMM DD")}</p>
                   <p>{article.minutesToRead}-minute read</p>
                 </small>
               </div>

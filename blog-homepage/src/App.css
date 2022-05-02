@@ -6,12 +6,6 @@
   columns: 3;
 } */
 
-.crop {
-  width:fit-content;
-  height: auto;
-  background-position: center center;
-}
-
 .Title {
   font-weight:400;
   font-size:1.2em;
@@ -30,4 +24,12 @@
 
 .Card-width {
   max-width: 40vw;
+}
+
+.Page-width {
+  max-width: 80em;
+}
+
+.Centered {
+  margin: auto;
 }
