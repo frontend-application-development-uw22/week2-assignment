@@ -27,8 +27,10 @@ function CardApp ({ srcUrl, title, description, authorImage, authorName, month, 
   );
 }
 
-CardApp.prototype = {
-  srcUrl: PropTypes.string.isRequired
+CardApp.propTypes = {
+  CardApp: PropTypes.arrayOf(
+    PropTypes.object
+  ).isRequired
 }
 
 export default CardApp;

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark as faBookmarkSolid } from '@fortawesome/free-solid-svg-icons'
 import { faBookmark } from '@fortawesome/free-regular-svg-icons'
-
+import Proptypes from 'prop-types';
 
 function AuthorDetails ({ authorImage, authorName, minutesToRead, link, month, todayDate }) {
   const [ bookmark, setBookMark ]  = useState( false );
@@ -28,4 +28,9 @@ function AuthorDetails ({ authorImage, authorName, minutesToRead, link, month, t
     );
 }
 
+AuthorDetails.propTypes = {
+  AuthorDetails: Proptypes.arrayOf(
+    Proptypes.object
+  ).isRequired
+}
 export default AuthorDetails;
