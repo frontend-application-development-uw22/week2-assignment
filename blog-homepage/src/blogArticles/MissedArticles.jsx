@@ -1,5 +1,6 @@
 import React from 'react'
 import MissedItem from "./MissedItem";
+import PropTypes from "prop-types";
 
 function MissedArticles({missedArticles}){
   console.log(missedArticles)
@@ -15,6 +16,11 @@ function MissedArticles({missedArticles}){
 
   )
 
+}
+
+MissedArticles.propTypes = {
+
+  missedArticles: PropTypes.arrayOf(PropTypes.object).isRequired
 
 }
 

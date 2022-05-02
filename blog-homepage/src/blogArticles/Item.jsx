@@ -1,12 +1,8 @@
 import React from 'react'
+import PropTypes from "prop-types";
 
 function Item({item, idx}){
 
-  // const hasAudio = item.hasAudioAvailable
-
-  // if(item.hasAudioAvailable){
-  //   console.log(`article has audio available: ${item.hasAudioAvailable}`)
-  // }
 
   const date = Date.parse(item.postedDate)
   const dateObject = new Date(date)
@@ -26,10 +22,6 @@ function Item({item, idx}){
         <div id="link-article" className="parent-two">
 
           <div className="child-two">
-
-            {/*{item.hasAudioAvailable ? (<p>Audio Available</p>): (<p></p>)*/}
-
-            {/*}*/}
 
             {item.hasAudioAvailable ? (<span><i className="fas fa-volume-off"></i><span> Audio Available</span><br></br></span>): (<span></span>)
 
@@ -81,13 +73,7 @@ function Item({item, idx}){
 
                 </button>
 
-                {/*<p className="bookmark-style">Bookmark</p>*/}
-
-
               </div>
-
-
-
 
             </div>
 
@@ -103,11 +89,6 @@ function Item({item, idx}){
 
             </div>
 
-            {/*<span className="child-four">*/}
-
-            {/*  <p>Bookmark</p>*/}
-
-            {/*</span>*/}
 
           </div>
 
@@ -121,6 +102,12 @@ function Item({item, idx}){
 
     )
 
+
+}
+
+Item.propTypes = {
+
+  item: PropTypes.object.isRequired
 
 }
 
