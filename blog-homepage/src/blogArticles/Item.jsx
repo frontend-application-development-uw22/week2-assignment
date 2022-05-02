@@ -13,12 +13,11 @@ function Item({item, idx}){
 
         <img src={item.image} className="article-img"/>
 
-
       </div>
 
       <div className="child">
 
-        <div className="parent-two">
+        <div id="link-article" className="parent-two">
 
           <div className="child-two">
 
@@ -26,24 +25,47 @@ function Item({item, idx}){
 
           </div>
 
-
-
           <div className="child-two">
 
             <p>{item.description}</p>
 
           </div>
 
+        </div>
+
+        <div className="parent-two-prime">
+
+          <div className="child-three">
+
+            <img src={item.author.image} className="author-img"/>
+
+          </div>
+
+          <div className="child-three">
+
+            <div className="child-four">
+
+              <p className="author-name"> {item.author.name} </p>
+
+            </div>
+
+            <div className="child-four">
+
+              <p>{dateObject.toLocaleString('en-US', {
+                                      day: 'numeric',
+                                      month: 'long',
+                                    })}
+              </p>
+
+            </div>
+
+          </div>
 
 
         </div>
 
 
       </div>
-
-
-
-
 
     </div>
 
