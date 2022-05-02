@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 function MissedBlog({ missedImage, missedTitle, missedDescription, missedAuthorImage, missedAuthorName, missedAuthorMedMem, missedPostedDate, missedMinutesToRead }) {
     return (
-        <article>
+        <article className="column">
             <div>
                 <img
                     src={missedImage}
@@ -15,13 +15,13 @@ function MissedBlog({ missedImage, missedTitle, missedDescription, missedAuthorI
             <div>
                 <h3>{missedTitle}</h3>
                 <p>{missedDescription}</p>
-                <div className="author">
+                <div className="author, row">
                     <img className="author-img"
                         src={missedAuthorImage}
                         alt="The author" />
                     <div className="author-info">
                         <p>{missedAuthorName}</p>
-                        <div className="article-data">
+                        <div className="article-data, row">
                             <p>{missedPostedDate}</p>
                             <p>{missedMinutesToRead} min read</p>
                         </div>
@@ -37,9 +37,9 @@ MissedBlog.propTypes = {
     missedDescription: PropTypes.string.isRequired,
     missedAuthorImage: PropTypes.string.isRequired,
     missedAuthorName: PropTypes.string.isRequired,
-    missedAuthorMedMem: PropTypes.bool.isRequired,
+    missedAuthorMedMem: PropTypes.bool,
     missedPostedDate: PropTypes.string.isRequired,
-    missedMinutesToRead: PropTypes.string.isRequired,
+    missedMinutesToRead: PropTypes.number.isRequired,
 }
 
 export default MissedBlog

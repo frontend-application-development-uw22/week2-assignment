@@ -1,5 +1,5 @@
 // import logo from './logo.svg';
-import './App.css';
+// import './App.css';
 // import missedArticles from './data/missed-articles.json';
 // import yourArticles from './data/your-articles.json';
 import BlogApp from './BlogApp/BlogApp';
