@@ -1,6 +1,12 @@
 import React from 'react';
+import Proptypes from 'prop-types';
 import yourArticles from './your-articles.json';
 import moment from 'moment';
+import bkmrk from './bkmrk.png';
+
+// function hasAudio() {
+//   return (hasAudioAvailable ? "Audio Available" : "");
+// }
 
 function ForYou() {
   return(
@@ -22,6 +28,7 @@ function ForYou() {
                     href={article.link}>{article.title}
                   </a>
                   <p className="card-text">{article.description}</p>
+                  {/* <p>{hasAudio()}</p> */}
                   <div className="row float-end">
                     <div className="col-md-4 Author-info">
                       <img 
@@ -31,9 +38,10 @@ function ForYou() {
                     </div>
                     <div className="col-md-8"> 
                       <small className="text-muted">
-                        <p className="fw-bold">{article.author.name}</p>
-                        <p>{moment(article.postedDate).format("MMM DD")}</p>
-                        <p>{article.minutesToRead} min read</p>
+                        <p className="fw-bold">{article.author.name} 
+                        <img className="Bkmrk-pic ms-3" src={bkmrk}/></p>
+                        <p>{moment(article.postedDate).format("MMM Do")} · {article.minutesToRead} min read</p>
+                        <p></p>
                       </small>
                     </div>
                   </div>
@@ -46,4 +54,18 @@ function ForYou() {
     </>
   )
 }
+
+ForYou.propTypes = {
+  id: Proptypes.number,
+  image: Proptypes.string,
+  link: Proptypes.string,
+  title: Proptypes.string,
+  description: Proptypes.string,
+  // author.image: Proptypes.string,
+  // author.name: Proptypes.string,
+  bkmrk: Proptypes.string,
+  postedDate: Proptypes.string,
+  minutesToRead: Proptypes.number,
+}
+
 export default ForYou;

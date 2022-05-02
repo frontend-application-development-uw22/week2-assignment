@@ -1,6 +1,8 @@
-import React from "react";
+import React from 'react';
+import Proptypes from 'prop-types';
 import missedArticles from './missed-articles.json'
 import moment from 'moment';
+import bkmrk from './bkmrk.png';
 
 function Missed() {
   return (
@@ -27,9 +29,10 @@ function Missed() {
               </div>
               <div className="col-md-8"> 
                 <small className="text-muted">
-                  <p >{article.author.name}</p>
-                  <p>{moment(article.postedDate).format("MMM DD")}</p>
-                  <p>{article.minutesToRead}-minute read</p>
+                  <p >{article.author.name}
+                  <img className="Bkmrk-pic ms-3" src={bkmrk}/></p>
+                  <p>{moment(article.postedDate).format("MMM Do")} · {article.minutesToRead}-minute read</p>
+                  <p></p>
                 </small>
               </div>
             </div>
@@ -38,6 +41,19 @@ function Missed() {
     ))}
     </>
   )
+}
+
+Missed.propTypes = {
+  id: Proptypes.number,
+  image: Proptypes.string,
+  link: Proptypes.string,
+  title: Proptypes.string,
+  description: Proptypes.string,
+  // author.image: Proptypes.string,
+  // author.name: Proptypes.string,
+  bkmrk: Proptypes.string,
+  postedDate: Proptypes.string,
+  minutesToRead: Proptypes.number,
 }
 
 export default Missed;
