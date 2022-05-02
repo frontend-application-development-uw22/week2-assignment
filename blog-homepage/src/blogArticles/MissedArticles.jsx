@@ -8,11 +8,10 @@ function MissedArticles({missedArticles}){
     <MissedItem key={idx} item={item}/>)
 
   return(
-    <ul>
 
+    <div className="grid-container">
       {items}
-
-    </ul>
+    </div>
 
   )
 

@@ -27,7 +27,15 @@ function Item({item, idx}){
 
           <div className="child-two">
 
-            {item.hasAudioAvailable ? (<p>Audio Available</p>): (<p></p>)
+            {/*{item.hasAudioAvailable ? (<p>Audio Available</p>): (<p></p>)*/}
+
+            {/*}*/}
+
+            {item.hasAudioAvailable ? (<span><i className="fas fa-volume-off"></i><span> Audio Available</span><br></br></span>): (<span></span>)
+
+            }
+
+            {item.memberPreview ? (<span><i className="fa fa-star"></i><span> Member Preview</span><br></br></span>): (<span></span>)
 
             }
 
