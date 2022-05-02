@@ -1,22 +1,21 @@
 import React from 'react';
-// import Prototypes from 'prop-types';
 import missedArticles from '../data/missed-articles.json';
 import yourArticles from '../data/your-articles.json'
 import MissedBlog from './MissedBlog';
 import YourBlog from './YourBlog';
-
 import '../App.css';
+
 function BlogApp() {
-    // const [{ title, description, image, link, authorName, authorImage, authorMedMem, postedDate, minutesToRead, hasAudioAvailable, memberPreview }] = yourArticles;
     // console.log(yourArticles);
     // console.log(missedArticles);
     // console.log(yourArticles[0].image)
     return (
         <div>
             <section className="your-blog, column">
-                <h2>For You</h2>
+                <h1>For You</h1>
                 <div className="your-article, row">
                     {yourArticles.map((yourArticle, idx) =>
+                       
                         <YourBlog
                             key={idx}
                             image={yourArticle.image}
@@ -24,7 +23,7 @@ function BlogApp() {
                             description={yourArticle.description}
                             authorImage={yourArticle.author.image}
                             authorName={yourArticle.author.name}
-                            authorMedMem={yourArticle.authorMedMem}
+                            authorMedMem={yourArticle.isMediumMember}
                             postedDate={yourArticle.postedDate}
                             minutesToRead={yourArticle.minutesToRead}
                             hasAudioAvailable={yourArticle.hasAudioAvailable}
@@ -38,7 +37,7 @@ function BlogApp() {
             {/* end of your-blog section */}
 
             <section className="missed-blog, column">
-                <h2>In Case You Missed It</h2>
+                <h1>In Case You Missed It</h1>
                 <div className="missed-articles, row">
                     {missedArticles.map((missedArticle, idx) =>
                         <MissedBlog
@@ -48,7 +47,7 @@ function BlogApp() {
                             missedDescription={missedArticle.description}
                             missedAuthorImage={missedArticle.author.image}
                             missedAuthorName={missedArticle.author.name}
-                            missedAuthorMedMem={missedArticle.authorMedMem}
+                            missedAuthorMedMem={missedArticle.isMediumMember}
                             missedPostedDate={missedArticle.postedDate}
                             missedMinutesToRead={missedArticle.minutesToRead}
                             missedHasAudioAvailable={missedArticle.hasAudioAvailable}

@@ -3,26 +3,32 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function MissedBlog({ missedImage, missedTitle, missedDescription, missedAuthorImage, missedAuthorName, missedAuthorMedMem, missedPostedDate, missedMinutesToRead }) {
+   
+    let date = new Date(missedPostedDate); 
+    let month = date.toLocaleString('en-us', { month: 'short' }); 
+    let day = date.getDate();
+    let newDate = month + " " + day;
+   
     return (
-        <article className="column">
-            <div>
+        <article className="missed-article, column">
+            <div className="blog-article-image">
                 <img
                     src={missedImage}
                     alt={missedTitle}
-                    className="article-image"
+                    className="blog-article-image"
                 />
             </div>
-            <div>
+            <div className="info-div">
                 <h3>{missedTitle}</h3>
                 <p>{missedDescription}</p>
                 <div className="author, row">
-                    <img className="author-img"
+                    <img className={`author-img ${missedAuthorMedMem ? "authorMedMem" : ""}`}
                         src={missedAuthorImage}
                         alt="The author" />
                     <div className="author-info">
                         <p>{missedAuthorName}</p>
                         <div className="article-data, row">
-                            <p>{missedPostedDate}</p>
+                            <p className="posted-date">{newDate}</p>
                             <p>{missedMinutesToRead} min read</p>
                         </div>
                     </div>
