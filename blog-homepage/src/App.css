@@ -164,3 +164,32 @@
   vertical-align: text-bottom;
   horiz-align: left;
 }
+
+.child-five {
+  display: inline-block;
+  width: 300px;
+  /*border: 1px solid red;*/
+  /*padding: 1rem 1rem;*/
+  vertical-align: text-bottom;
+  horiz-align: right;
+}
+
+.child-six {
+  display: inline-block;
+  width: 300px;
+  /*border: 1px solid red;*/
+  /*padding: 1rem 1rem;*/
+  vertical-align: text-bottom;
+  horiz-align: right;
+  text-align: right;
+}
+
+.bookmark-style{
+  horiz-align: right;
+  width: 300px;
+  text-align: right;
+
+}
+
+
+
