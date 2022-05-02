@@ -41,14 +41,11 @@ h1 {
   font-size: 1.5rem;
 }
 
+
+
 .your-article {
   width: 45%;
 }
-
-.missed-articles {
-  justify-content: space-between;
-}
-
 .your-blog {
   width: 30%;
 }
@@ -57,6 +54,11 @@ h1 {
   width: 190px;
   height: 200px;
 }
+
+.missed-articles {
+  justify-content: space-between;
+}
+
 
 .blog-article-image {
   width: 95%;
@@ -69,8 +71,8 @@ h1 {
 }
 
 .author {
-  margin-top: 50rem;
-  justify-content: flext-start;
+  margin-top: 20px;
+  /* justify-content: flext-start; */
 
 }
 
@@ -87,6 +89,6 @@ h1 {
 }
 
 .posted-date,
-.article-data {
+.article-date {
   margin-right: 1rem;
 }
