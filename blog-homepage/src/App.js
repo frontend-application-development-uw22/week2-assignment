@@ -1,11 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
-
-import articles from './_data/your-articles.json'
-import missedArticles from './_data/missed-articles.json'
-import MyArticles from "./blogArticles/MyArticles";
-import MissedArticles from "./blogArticles/MissedArticles";
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
+import articles from './_data/your-articles.json';
+import missedArticles from './_data/missed-articles.json';
+// eslint-disable-next-line no-unused-vars,import/extensions,import/no-unresolved
+import MyArticles from './blogArticles/MyArticles';
+// eslint-disable-next-line no-unused-vars,import/extensions,import/no-unresolved
+import MissedArticles from './blogArticles/MissedArticles';
 
 function App() {
   return (
@@ -45,8 +45,8 @@ App.propTypes = {
     hasAudioAvailable: PropTypes.bool.isRequired,
     memberPreview: PropTypes.bool.isRequired,
 
-  }))
-}
+  })),
+};
 
 App.propTypes = {
   missedArticles: PropTypes.arrayOf(PropTypes.shape({
@@ -59,7 +59,7 @@ App.propTypes = {
     hasAudioAvailable: PropTypes.bool.isRequired,
     memberPreview: PropTypes.bool.isRequired,
 
-  }))
-}
+  })),
+};
 
 export default App;

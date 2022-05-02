@@ -1,0 +1,24 @@
+{
+  "extends": "airbnb-base",
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "babelOptions": {
+      "presets": ["@babel/preset-react"]
+    }
+  },
+//  "eslint.workingDirectories": [
+//    {"mode": "auto"}
+//  ],
+//  "eslint.workingDirectories": [
+//    {"mode": "auto"}
+//  ],
+//  "requireConfigFile": false,
+//  "ecmaVersion": 8,
+  "env": {
+    "node": true,
+    "jest": true
+  },
+  "rules":{
+    "linebreak-style": 0
+  }
+}
