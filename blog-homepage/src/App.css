@@ -68,11 +68,14 @@
   width:240px;
   height:240px;
   object-fit:cover;
+  align-content: center;
+  align-items: center;
+  alignment: center;
   /*border-radius:50%;*/
 }
 
 .missed-article-img{
-  width:600px;
+  width:647px;
   height:240px;
   object-fit:cover;
   /*border-radius:50%;*/
@@ -134,7 +137,7 @@
   /*border: 1px solid black;*/
   display: inline;
   /*width: 240px;*/
-  /*height: 300px;*/
+  height: 600px;
   border: 1px solid lightgray;
   margin: 1rem;
   /*padding: 2rem 2rem;*/
