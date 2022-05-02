@@ -3,12 +3,14 @@ import MissedBlog from './MissedBlog';
 import ForYouBlog from './ForYouBlog';
 import missedArticles from '../data/missed-articles.json';
 import yourArticles from '../data/your-articles.json';
+import '../App.css';
 
 function BlogApp() {
     return (
         <div>
             <section>
                 <h2>For You</h2>
+                <div class="row">
                 {yourArticles.map((yourArticle, idx) =>
                     <ForYouBlog
                         key={idx}
@@ -23,11 +25,12 @@ function BlogApp() {
                         hasAudioAvailable={yourArticle.hasAudioAvailable}
                         memberPreview={yourArticle.memberPreview}
                     />
-                )}
+                )}</div>
             </section>
 
             <section>
                 <h2>In case you missed it</h2>
+                <div class="row missed">
                 {missedArticles.map((missedArticle, idx) =>
                     <MissedBlog
                         key={idx}
@@ -42,7 +45,7 @@ function BlogApp() {
                         hasAudioAvailable={missedArticle.hasAudioAvailable}
                         memberPreview={missedArticle.memberPreview}
                     />
-                )}
+                )}</div>
             </section>
         </div>
 

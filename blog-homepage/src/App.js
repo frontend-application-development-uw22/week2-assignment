@@ -1,4 +1,3 @@
-import './App.css';
 import BlogApp from './BlogApp/BlogApp';
 
 function App() {
