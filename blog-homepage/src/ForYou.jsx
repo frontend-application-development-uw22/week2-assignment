@@ -3,7 +3,8 @@ import Proptypes from 'prop-types';
 import yourArticles from './your-articles.json';
 import moment from 'moment';
 import bkmrk from './bkmrk.png';
-// import HasAudio from './HasAudio';
+import HasAudio from './HasAudio';
+import HasMemPrev from './MemPrev';
 
 function ForYou() {
   return(
@@ -20,12 +21,15 @@ function ForYou() {
               </div>
               <div className="col-md-6">
                 <div className="card-body">
+                  <small>
+                  <p>{HasAudio(article.hasAudioAvailable)}
+                  {HasMemPrev(article.memberPreview)}</p>
+                  </small>
                   <a 
                     className="card-title Title" 
                     href={article.link}>{article.title}
                   </a>
                   <p className="card-text">{article.description}</p>
-                  {/* <p>{hasAudio(article.hasAudioAvailable)}</p> */}
                   <div className="row float-end">
                     <div className="col-md-4 Author-info">
                       <img 

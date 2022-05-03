@@ -20,7 +20,7 @@ function Missed() {
                 href={article.link}>{article.title}</a>
               <p className="card-text">{article.description}</p>
             </div>
-            <div className="card-footer row">
+            <div className="row">
               <div className="col-md-4">
                 <img 
                   className="Author-pic" 
