@@ -8,9 +8,12 @@ import yourArticles from './your-articles.json';
 function App() {
   return (
     <div className="App">
-      <BlogHomepageApp />
+      <BlogHomepageApp
+        missedArticles = {missedArticles}
+        yourArticles = {yourArticles}
+      />
     </div>
   );
-}
+};
 
 export default App;
