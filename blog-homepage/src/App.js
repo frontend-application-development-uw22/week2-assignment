@@ -3,6 +3,7 @@ import './App.css';
 import missedArticles from './missed-articles.json';
 import yourArticles from './your-articles.json'; 
 import ArticleItems from './ArticleItems';
+import React from 'react';
 
 function App() {
   // console.log(yourArticles);

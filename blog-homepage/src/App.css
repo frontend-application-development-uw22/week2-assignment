@@ -86,8 +86,15 @@
   width: 100%; 
   height: 50px; 
   display: grid;
-  grid-template-columns: 1fr 20fr;
+  grid-template-columns: 1fr 30fr 1fr;
   grid-gap: 20px;
+}
+
+.audioDiv {
+  display: grid;
+  grid-template-columns: 1fr 30fr 1fr;
+  resize: horizontal;
+  overflow: hidden;
 }
 
 .sectionTitle {
@@ -100,4 +107,13 @@
 
 hr {
   margin: 1em;;
+}
+
+.authorOutlineOn {
+  outline-style: solid;
+  outline-color: #32a1ce;;
+}
+
+.authorOutlineOff {
+  outline-style: none;
 }
