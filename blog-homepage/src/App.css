@@ -5,10 +5,6 @@
   padding: 1em;
 }
 
-.Article {
-  border: black 1px solid;
-}
-
 h2 {
   text-align: left;
   border-bottom: #d9d9d9 solid 1px;
@@ -21,44 +17,93 @@ h2 em {
   padding-bottom: 1em;
 }
 
+.audio-is-available, .member-preview {
+  color: #757575;
+}
+
+
+.hidden {
+  display: none;
+}
+
+.article-list {
+  display: grid;
+}
+
 #for-you {
-
+  grid-template-columns: auto auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
 }
 
-#in-case-you-missed-it {
+#missed-articles {
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.article {
+  text-align: left;
+  display: grid;
+  border: #e5e5e5 1px solid;
+  border-radius: 5px;
+  grid-template-columns: 33% auto;
+  grid-template-rows: auto auto;
+  column-gap: 1em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.article > .article-img {
+  width: 100%;
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.article-img > img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.article-content {
+  grid-column: 2 / 3;
+  margin-left: 1em;
+}
+
+.article-data {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  column-gap: 1em;
+  flex-direction: row;
+  justify-content: left;
+  align-items: flex-end;
+  margin-bottom: 1em;
 }
 
-.App-link {
-  color: #61dafb;
+.article-bookmark {
+  font-size: 20px;
+  flex-basis: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.article-data > div p {
+  margin-top: 0.35em;
+  margin-bottom: 0.35em;
 }
+
+.author-img {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  flex-basis: 50px;
+}
+
+.medium-author {
+  border: #379579 3px solid;
+  box-shadow: #379579 0px 0px 5px;
+}
+
+.article-description, .article-date-minutes {
+  color: #737373;
+}
+
