@@ -1,0 +1,43 @@
+.App {
+  text-align: left;
+}
+
+div {
+  width: 99%;
+  margin: auto;
+}
+
+.container {
+  border-style: solid;
+}
+
+.bigImage {
+  width: 400px;
+}
+
+/* .title {
+}
+
+.description {
+} */
+
+.roundImage {
+  object-fit: cover;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.text {
+  display: inline-block;
+  text-align: left;
+  position: absolute;
+}
+
+h4 {
+  display: none;
+}
+
+.bookmark {
+  text-align: center;
+}
