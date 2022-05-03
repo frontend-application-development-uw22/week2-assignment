@@ -14,14 +14,16 @@ function Container() {
                 {displayYourArticles.map(yourArticle => 
                     <ArticleContainer 
                         articleClass="your-articles"
-                        src={yourArticle.image}
-                        alt='to be determined'
-                        articleTitle={yourArticle.title}
+                        image={yourArticle.image}
+                        alt='placeholder'
+                        title={yourArticle.title}
                         description={yourArticle.description}
                         authorPicture={yourArticle.author.image}
                         authorName={yourArticle.author.name}
                         publishedDate={yourArticle.postedDate}
                         articleLength={yourArticle.minutesToRead}
+                        audioAvl={yourArticle.hasAudioAvailable}
+                        memberPrev={yourArticle.memberPreview}
                     />
                 )}
             </div>
@@ -32,14 +34,16 @@ function Container() {
                 {displayMissedArticles.map(missedArticle => 
                     <ArticleContainer 
                         articleClass="missed-articles"
-                        src={missedArticle.image}
-                        alt='to be determined'
-                        articleTitle={missedArticle.title}
+                        image={missedArticle.image}
+                        alt='placeholder'
+                        title={missedArticle.title}
                         description={missedArticle.description}
                         authorPicture={missedArticle.author.image}
                         authorName={missedArticle.author.name}
                         publishedDate={missedArticle.postedDate}
                         articleLength={missedArticle.minutesToRead}
+                        audioAvl={missedArticle.hasAudioAvailable}
+                        memberPrev={missedArticle.memberPreview}
                     />
                 )}
             </div>
