@@ -1,0 +1,64 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+.missedSectionTitleDecoration{
+  width: 100%;
+  border-bottom: 2px gray solid;
+  margin-bottom: 100px;
+}
+.missedArticles{
+  display: flex;
+  align-content: center;
+}
+  .missedCard{
+    width: 25rem;
+    margin: 10px;
+    height: 450px;
+  }
+  .missedCardBody{
+    display: grid;
+    grid-template-rows: 1fr auto;
+  }
+  .missedTitleImg{
+    width: 350px;
+    height: 150px;
+  }
+  .missedPreview{
+    position: relative;
+    left: 25%;
+  }
+  .missedAuthorImg{
+    border-radius: 50%;
+  }
+  .missedTitleImgMember{
+    border-radius: 50%;
+    border: 5px solid aqua;
+  }
+  .missedAuthorName{
+    position: relative;
+    left: 30%;
+    bottom: 80px;
+  
+  }
+  .missedPostedDate{
+    position: relative;
+    left: 30%;
+    bottom: 85px;
+    font-size: 12px;
+    color: gray;
+  }
+  .missedMinToRead{
+    position: relative;
+    left: 40%;
+    bottom: 135px;
+    font-size: 12px;
+    color: gray;
+  }
+  .missedButton{
+    position: relative;
+    bottom: 100px;
+    width: 35%;
+    left: 35%;
+  }
+
