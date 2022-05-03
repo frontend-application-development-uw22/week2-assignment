@@ -3,6 +3,8 @@ import Proptypes from 'prop-types';
 import missedArticles from './missed-articles.json'
 import moment from 'moment';
 import bkmrk from './bkmrk.png';
+import HasAudio from './HasAudio';
+import HasMemPrev from './MemPrev';
 
 function Missed() {
   return (
@@ -15,6 +17,10 @@ function Missed() {
               className="img-fluid" 
               alt="Article image"/>
             <div className="card-body">
+              <small>
+                <p>{HasAudio(article.hasAudioAvailable)}
+                {HasMemPrev(article.memberPreview)}</p>
+              </small>
               <a 
                 className="card-title Title" 
                 href={article.link}>{article.title}</a>
