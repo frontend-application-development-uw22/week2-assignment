@@ -44,14 +44,10 @@ a {
   min-height: 250px;
 }
 
-.post-new__member-preview {
-  padding: 5px 0;
-}
-
 .post-new__info {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 10px;
 }
 
@@ -110,7 +106,8 @@ a {
   border-bottom: 1px solid #aeaeae;
 }
 
-.post-new__title {
+.post-new__title,
+.post-missed__title {
   margin-bottom: 0.4rem;
 }
 
