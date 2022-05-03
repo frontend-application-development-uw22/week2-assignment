@@ -1,15 +1,19 @@
-import React from "react";
+import React, {useState} from "react";
 import ArticleItem from './ArticleItem';
 import propTypes from 'prop-types';
 
-function ArticleItems ({articleList, Title, numberOfCols}) {
-    // console.log({articleList});
+function ArticleItems ({articleList, Title, numberOfCols, turnGreen}) {
+    const [itemToBookmark, turnGreenBookmark] = useState('');
+
+    // console.log(itemToBookmark);
+    // console.log(turnGreenBookmark);
     const articles = articleList.map((article, idx) => {
         // console.log(article);
         return (
             <ArticleItem
                 key={idx}
-                article={article}>
+                article={article}
+                onBookmarkClick={(idx) => turnGreen(idx)}>
             </ArticleItem>
         );
     })

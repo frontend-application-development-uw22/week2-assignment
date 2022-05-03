@@ -2,7 +2,7 @@ import React from 'react';
 import propTypes from "prop-types";
 import { FaAudible, FaRegBookmark, FaCheck, FaStar, FaTimes } from 'react-icons/fa'
 
-function ArticleItem({article}) {
+function ArticleItem({article, onBookmarkClick}) {
     // console.log(article);
     const safeNewDate = function(localDateTimeStr) {
 
@@ -33,15 +33,14 @@ function ArticleItem({article}) {
             return (<span>Member preview&nbsp;<FaTimes /></span>);
         }
     }
-    console.log(article);
+    // console.log(article);
     return(
-        <a href={article.link} target='_blank' className='card'>
         <div className="articleDiv">
-            <img className="imgArticle" src={article.image} width="280" height="280"></img>
+            <a href={article.link} target='_blank' className='card'><img className="imgArticle" src={article.image} width="280" height="280"></img></a>
             <div className="articleContent">
                 {showAudioAvailable(article.hasAudioAvailable)}
-                <h2>{article.title}</h2>
-                {article.description}
+                <h2><a href={article.link} target='_blank' className='card'>{article.title}</a></h2>
+                <a href={article.link} target='_blank' className='card'>{article.description}</a>
                 <div className="authorDiv">
                     <div>
                         <img alt={article.author.name} className={'imgAuthor ' + (article.author.isMediumMember ? 'authorOutlineOn' : 'authorOutlineOff')}
@@ -58,11 +57,10 @@ function ArticleItem({article}) {
                                 {safeNewDate(article.postedDate)} - {article.minutesToRead} min read; {showMemberPreviewCheck(article.memberPreview)}
                             </div>
                     </div>
-                    <div><FaRegBookmark /></div>
+                    <div><FaRegBookmark onClick={onBookmarkClick}/></div>
                 </div>
             </div>
         </div>
-        </a>
     );
 }
 

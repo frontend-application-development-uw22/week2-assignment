@@ -1,9 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import missedArticles from './missed-articles.json';
-import yourArticles from './your-articles.json'; 
-import ArticleItems from './ArticleItems';
 import React from 'react';
+import ArticleApp from './ArticleApp';
 
 function App() {
   // console.log(yourArticles);
@@ -23,8 +21,7 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <ArticleItems articleList={yourArticles} Title="For you" numberOfCols="2"></ArticleItems>
-      <ArticleItems articleList={missedArticles} Title="In case you missed it" numberOfCols="3"></ArticleItems>
+      <ArticleApp />
     </div>
   );
 }
