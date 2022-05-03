@@ -3,7 +3,7 @@ import propTypes from "prop-types";
 import { FaAudible, FaRegBookmark, FaCheck, FaStar, FaTimes } from 'react-icons/fa'
 
 function ArticleItem({article}) {
-    console.log(article);
+    // console.log(article);
     const safeNewDate = function(localDateTimeStr) {
 
         var match = localDateTimeStr.match(
@@ -33,8 +33,9 @@ function ArticleItem({article}) {
             return (<span>Member preview&nbsp;<FaTimes /></span>);
         }
     }
-
+    console.log(article);
     return(
+        <a href={article.link} target='_blank' className='card'>
         <div className="articleDiv">
             <img className="imgArticle" src={article.image} width="280" height="280"></img>
             <div className="articleContent">
@@ -61,6 +62,7 @@ function ArticleItem({article}) {
                 </div>
             </div>
         </div>
+        </a>
     );
 }
 

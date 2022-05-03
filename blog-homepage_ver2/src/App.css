@@ -117,3 +117,8 @@ hr {
 .authorOutlineOff {
   outline-style: none;
 }
+
+a.card:link { text-decoration: none; }
+a.card:visited { text-decoration: none; }
+a.card:hover { text-decoration: none; }
+a.card:active { text-decoration: none; }
