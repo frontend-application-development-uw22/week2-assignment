@@ -49,8 +49,10 @@ Missed.propTypes = {
   link: Proptypes.string,
   title: Proptypes.string,
   description: Proptypes.string,
-  // author.image: Proptypes.string,
-  // author.name: Proptypes.string,
+  author: Proptypes.shape({
+    image: Proptypes.string.isRequired,
+    name: Proptypes.string.isRequired
+  }),
   bkmrk: Proptypes.string,
   postedDate: Proptypes.string,
   minutesToRead: Proptypes.number,

@@ -3,10 +3,7 @@ import Proptypes from 'prop-types';
 import yourArticles from './your-articles.json';
 import moment from 'moment';
 import bkmrk from './bkmrk.png';
-
-// function hasAudio() {
-//   return (hasAudioAvailable ? "Audio Available" : "");
-// }
+// import HasAudio from './HasAudio';
 
 function ForYou() {
   return(
@@ -28,7 +25,7 @@ function ForYou() {
                     href={article.link}>{article.title}
                   </a>
                   <p className="card-text">{article.description}</p>
-                  {/* <p>{hasAudio()}</p> */}
+                  {/* <p>{hasAudio(article.hasAudioAvailable)}</p> */}
                   <div className="row float-end">
                     <div className="col-md-4 Author-info">
                       <img 
@@ -56,16 +53,18 @@ function ForYou() {
 }
 
 ForYou.propTypes = {
-  id: Proptypes.number,
-  image: Proptypes.string,
-  link: Proptypes.string,
-  title: Proptypes.string,
-  description: Proptypes.string,
-  // author.image: Proptypes.string,
-  // author.name: Proptypes.string,
-  bkmrk: Proptypes.string,
-  postedDate: Proptypes.string,
-  minutesToRead: Proptypes.number,
+  id: Proptypes.number.isRequired,
+  image: Proptypes.string.isRequired,
+  link: Proptypes.string.isRequired,
+  title: Proptypes.string.isRequired,
+  description: Proptypes.string.isRequired,
+  author: Proptypes.shape({
+    image: Proptypes.string.isRequired,
+    name: Proptypes.string.isRequired
+  }),
+  bkmrk: Proptypes.string.isRequired,
+  postedDate: Proptypes.string.isRequired,
+  minutesToRead: Proptypes.number.isRequired,
 }
 
 export default ForYou;
