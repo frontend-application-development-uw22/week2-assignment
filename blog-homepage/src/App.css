@@ -2,14 +2,279 @@
   padding: 0px;
   margin: 0px;
 }
-.missedSectionTitleDecoration{
+
+.forYouSection{
+  margin-top: 20px;
+  ;
+}
+.forYouSectionTitleDecoration{
+  position: relative;
+  top: 180px;
   width: 100%;
   border-bottom: 2px gray solid;
   margin-bottom: 100px;
 }
+#forYouHead{
+  position: relative;
+  left: .5%;
+  border-bottom: black 2px solid;
+  width: fit-content;
+  height: 80px;
+}
+.forYouArticles{
+  display: grid;
+  grid-template-columns: repeat(2,204px);
+  margin-top: 50px;
+  margin-right: 30px;
+  position: relative;
+  left: .5%;
+}
+  .forYouCard{
+    width: 38rem;
+    height: 403px;
+  }
+    #forYouCardID_1, #forYouCardID_3{
+      position: relative;
+      left: 210%;
+    }
+    #forYouCardID_2, #forYouCardID_3{
+      position: relative;
+      top: 20px;
+    }
+  .forYouCardBody{
+    display: grid;
+    grid-template-columns: 2fr auto;
+  }
+  .forYouTitleImg{
+    width: 250px;
+    height: 320px;
+    grid-column: 1/2;
+  }
+  .forYouArticleTitle{
+    grid-column: 2/2;
+    position: relative;
+    bottom: 325px;
+    width: 15rem;
+    font-size: 11px;
+  }
+    #forYouArticleTitleID_0{
+      position: relative;
+      left: 5%;
+    }
+    #forYouArticleTitleID_1{
+      position: relative;
+      left: 0%;
+    }
+    #forYouArticleTitleID_2{
+      position: relative;
+      right: 30%;
+    }
+    #forYouArticleTitleID_3{
+      position: relative;
+      left: 5%;
+      bottom: 300px;
+    }
+  .forYouPreview{
+    position: relative;
+    left: 25%;
+  }
+  .forYouArticleDescription{
+    grid-column: 2/2;
+    position: relative;
+    bottom: 300px;
+  }
+    #forYouArticleDescriptionID_0{
+      position: relative;
+      left: 5%;
+    }
+    #forYouArticleDescriptionID_2{
+      position: relative;
+      right: 30%;
+    }
+    #forYouArticleDescriptionID_3{
+      position: relative;
+      left: 5%;
+    }
+  .forYouAuthorImg{
+    border-radius: 50%;
+    grid-column: 2/2;
+  }
+      #forYouAuthorPictureID_1{
+        position: relative;
+        bottom: 220px;
+      }
+      #forYouAuthorPictureID_2{
+        position: relative;
+        bottom: 172px;
+        right: 28%;
+      }
+      #forYouAuthorPictureID_3{
+        position: relative;
+        bottom: 172px;
+        left: 5%;
+      } 
+  .forYouTitleImgMember{
+    border-radius: 50%;
+    position: relative;
+    bottom: 230px;
+    left: 5%;
+    grid-column: 2/2;
+    animation: glow 1.5s infinite alternate;
+  }
+  
+  
+  @keyframes glow {
+      from {
+      box-shadow: 0 0 20px -25px green;
+      }
+      to {
+      box-shadow: 0 0 5px 15px white;
+      }
+  }
+
+  .forYouAuthorName{
+    position: relative;
+    grid-column: 2/2;
+    left: 30%;
+    bottom: 250px;
+    font-weight: bold;
+  }
+    #forYouAuthorNameID_0{
+      position: relative;
+      bottom: 320px;
+      left: 35%;
+    }
+    #forYouAuthorNameID_1{
+      position: relative;
+      bottom: 305px;
+      left: 28%;
+    }
+    #forYouAuthorNameID_2{
+      position: relative;
+      bottom: 255px;
+      left: 10%;
+    }
+  .forYouPostedDate{
+    grid-column: 2/2;
+    position: relative;
+    bottom: 340px;
+    left: 35%;
+    color: gray;
+  }
+    #forYouPostedDateID_1{
+      position: relative;
+      bottom: 325px;
+      left: 28%;
+    }
+    #forYouPostedDateID_2{
+      position: relative;
+      bottom: 275px;
+      left: 10%;
+    }
+    #forYouPostedDateID_3{
+      position: relative;
+      bottom: 272px;
+      left: 30%;
+    }
+  .forYouMinToRead{
+    position: relative;
+    left: 162.4%;
+    bottom: 396px;
+    font-size: 16px;
+    color: gray;
+  }
+    #forYouMinToReadID_1{
+      position: relative;
+      bottom: 382px;
+      left: 158%;
+    }
+    #forYouMinToReadID_2{
+      position: relative;
+      bottom: 331px;
+      left: 124%;
+    }
+    #forYouMinToReadID_3{
+      position: relative;
+      bottom: 328px;
+      left: 160%;
+    }
+  .forYouBookMark{
+    position: absolute;
+    left: 95%;
+    bottom: 100px;
+    cursor: pointer;
+  }
+  .forYouBookMarkIMG{
+    width: 15px;
+  }
+  .forYouButton{
+    position: relative;
+    width: 10rem;
+    left: 35%;
+    grid-column: 2/2;
+  }
+    #forYouButtonID_0{
+      position: relative;
+      bottom: 405px;
+    }
+    #forYouButtonID_1{
+      position: relative;
+      bottom: 390px;
+      left: 28%;
+    }
+    #forYouButtonID_2{
+      position: relative;
+      bottom: 340px;
+      left: 10%;
+    }
+    #forYouButtonID_3{
+      position: relative;
+      bottom: 335px;
+      left: 30%;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.missedSection{
+  margin-top: 20px;
+  position: relative;
+}
+.missedSectionTitleDecoration{
+  position: relative;
+  top: 180px;
+  width: 100%;
+  border-bottom: 2px gray solid;
+  margin-bottom: 100px;
+}
+#missedHead{
+  position: relative;
+  left: .5%;
+  border-bottom: black 2px solid;
+  width: fit-content;
+  height: 80px;
+}
 .missedArticles{
   display: flex;
-  align-content: center;
+  margin-top: 50px;
 }
   .missedCard{
     width: 25rem;
@@ -33,14 +298,32 @@
   }
   .missedTitleImgMember{
     border-radius: 50%;
-    border: 5px solid aqua;
+    animation: glow 1.5s infinite alternate;
   }
+  
+  
+  @keyframes glow {
+      from {
+      box-shadow: 0 0 20px -25px green;
+      }
+      to {
+      box-shadow: 0 0 5px 15px white;
+      }
+  }
+    #missedAuthorPictureID_1{
+      position: relative;
+      top: 25px;
+    }
   .missedAuthorName{
     position: relative;
     left: 30%;
     bottom: 80px;
   
   }
+    #missedAuthorNameID_1{
+      position: relative;
+      top: -60px;
+    }
   .missedPostedDate{
     position: relative;
     left: 30%;
@@ -48,6 +331,10 @@
     font-size: 12px;
     color: gray;
   }
+    #missedDateID_1{
+      position: relative;
+      bottom: 65px;
+    }
   .missedMinToRead{
     position: relative;
     left: 40%;
@@ -55,10 +342,23 @@
     font-size: 12px;
     color: gray;
   }
+    #missedMinToReadID_1{
+      position: relative;
+      bottom: 115px;
+    }
+  .missedBookMark{
+    width: 15px;
+    position: absolute;
+    left: 85%;
+    bottom: 45px;
+  }
   .missedButton{
     position: relative;
-    bottom: 100px;
+    bottom: 120px;
     width: 35%;
     left: 35%;
   }
+    #missedButtonID_1{
+      top: -95px;
+    }
 

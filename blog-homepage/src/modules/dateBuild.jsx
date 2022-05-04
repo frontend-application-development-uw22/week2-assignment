@@ -1,5 +1,6 @@
 import React from "react";
-import ProtoType from "prop-types";
+import PropTypes from "prop-types";
+
 
 
 const DateBuild = ({date})=>{
@@ -8,7 +9,7 @@ const DateBuild = ({date})=>{
     <p>{stringDate.toLocaleDateString("en-us",{month:"short", day:"numeric"})}</p>
   );
 };
-DateBuild.ProtoType ={
-  date: ProtoType.string.isRequired
+DateBuild.propTypes={
+  date: PropTypes.string.isRequired
 };
 export default DateBuild;
