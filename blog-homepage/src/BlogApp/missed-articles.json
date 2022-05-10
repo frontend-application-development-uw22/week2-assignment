@@ -1,9 +1,11 @@
 [
     {
+        "id" : 5,
         "title": "What Would Happen If You Did These Things Every Day...",
         "description": "For thirty days...",
         "image": "https://cdn-images-1.medium.com/max/800/1*NosScbnZp8m_clHHaPQ3mg.jpeg",
         "link": "https://entrepreneurs.maqtoob.com/what-would-happen-if-you-did-these-things-every-day-7e39f62a6335",
+        "imageDescription" : "Black swatches on white background.",
         "author": {
             "name": "Alex Mathers",
             "image": "https://cdn-images-1.medium.com/fit/c/80/80/1*wsP97tix16onOIkq4STxuw.jpeg",
@@ -15,10 +17,12 @@
         "memberPreview": false
     },
     {
+        "id" : 6,
         "title": "10 Strategies for Creating Viral and Powerful Content",
         "description": "",
         "image": "https://cdn-images-1.medium.com/max/800/0*jxP3G649xndI9S_m.",
         "link": "https://medium.com/@zdravko/10-strategies-for-creating-viral-and-powerful-content-b4ce7bbb4904",
+        "imageDescription" : "Red typewriter on black leather couch.",
         "author": {
             "name": "Zdravko Cvijetic",
             "image": "https://cdn-images-1.medium.com/fit/c/80/80/1*0OAF2WviyXwa7MuRKtKUpA@2x.jpeg",
@@ -30,9 +34,11 @@
         "memberPreview": false
     },
     {
+        "id" : 7,
         "title": "Useful Tools for Writers",
         "description": "Jumpstart your process.",
         "image": "https://cdn-images-1.medium.com/max/800/1*Msq_1dsr2maPq3ujjTVu3w.jpeg",
+        "imageDescription" : "Large pile of papers.",
         "link": "https://medium.com/@jaxonleerose/useful-tools-for-writers-46eb0736d660",
         "author": {
             "name": "JLRose",
