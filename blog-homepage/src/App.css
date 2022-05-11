@@ -1,0 +1,98 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.section-1,.section-2 {
+  padding: 20px;
+}
+
+.col-md-3 {
+  display: grid;
+  grid-template-columns: auto auto;
+  box-shadow: 0 8px 8px 0 rgba(0,0,0,0.1.5);
+}
+
+.col-md-6 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  box-shadow: 0 8px 8px 0 rgba(0,0,0,0.1.5);
+}
+
+.layout {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: auto auto;
+  margin: 10px;
+}
+
+h4,p,span {
+  margin: 0px!important;
+}
+
+.card-body-description {
+  padding:2px;
+}
+
+.author-img{
+  width: 40px;
+  border-radius: 50%;
+}
+
+.picture-card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  display: flex;
+}
+
+.author-description {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 30% 50%;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.card-img {
+  padding: 2px 16px;
+}
+.card-body {
+  padding: 0px 16px;
+}
+img {
+  width:100%
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
